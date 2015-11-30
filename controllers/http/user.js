@@ -59,7 +59,7 @@ module.exports =
 
             user.setValues(req.body);
 
-            if (!user.hasProperties(['email', 'password', 'firstName', 'lastName'])) {
+            if (!user.hasProperties(['email', 'password', 'name'])) {
                 return res.status(412).send('Email, password, and a name are required');
             }
 

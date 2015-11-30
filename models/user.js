@@ -6,8 +6,7 @@ var md5 = require('MD5');
 var properties = {
     email: String,
     password: { type: String, select: false },
-    firstName: String,
-    lastName: String,
+    name: String,
     image: String
 }
 
@@ -15,7 +14,7 @@ var options = {}
 
 var methods = {
     getFullName: function () {
-        return this.firstName + ' ' + this.lastName;
+        return this.name;
     },
 
     setPassword: function (password) {
